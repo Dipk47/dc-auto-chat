@@ -128,7 +128,7 @@ def auto_reply(channel_id, read_delay, reply_delay, use_google_ai, use_file_repl
             if response.status_code == 200:
                 messages = response.json()
                 if len(messages) > 0:
-                    most recent_message = messages[0]
+                    most_recent_message = messages[0]
                     message_id = most_recent_message.get('id')
                     author_id = most_recent_message.get('author', {}).get('id')
                     message_type = most_recent_message.get('type', '')
